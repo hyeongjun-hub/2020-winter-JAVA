@@ -17,8 +17,8 @@ public class First_Screen extends JFrame {
 	public First_Screen() {
 		setTitle("버거킹");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocation(300, 300);
-		setResizable(false);
+		setLocation(300, 300); // 화면을 중간에 넣게 해줄 수 있는 코드
+		setResizable(false); // 창 확대or축소를 못하게하는 코드
 		Container c = getContentPane();
 		setLayout(new BorderLayout());
 
@@ -26,6 +26,7 @@ public class First_Screen extends JFrame {
 		c.add(btnPanel, BorderLayout.WEST);
 		btnPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 20, 40));
 
+		// 버튼 생성
 		JButton btn1 = new JButton("관리자용");
 		JButton btn2 = new JButton("고객용");
 		JButton btn3 = new JButton("프로그램 종료");
@@ -35,14 +36,17 @@ public class First_Screen extends JFrame {
 		c.add(imageLabel, BorderLayout.EAST);
 
 		btnPanel.setBackground(Color.GRAY);
-
+		// 버튼을 화면에 띄워주는 코드
 		btnPanel.add(btn1);
 		btnPanel.add(btn2);
 		btnPanel.add(btn3);
 		btnPanel.setSize(100, 50);
 
+		// Container c 꾸미기
 		setSize(850, 200);
 		setVisible(true);
+
+		// 버튼 역할
 
 		btn1.addActionListener(new ActionListener() {
 
